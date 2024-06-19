@@ -38,12 +38,17 @@
     text-decoration: underline;
 }
 
+.navbar-nav .nav-link.active {
+    color: #ffd700;
+    /* Color del enlace activo */
+}
+
 .navbar-toggler {
-    border-color: #312F3D;
+    border-color: #333333;
 }
 
 .navbar-toggler-icon {
-    background-color: #312F3D;
+    background-color: #ffd700;
 }
 
 @media (max-width: 992px) {
