@@ -1,11 +1,29 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .App {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100%;
+  position: relative;
 }
 
 section {
   padding: 2rem;
   margin: 1rem 0;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(181, 192, 240, 0.274);
+}
+
+.Parallax__background--fixed {
+  background-size: cover;
+  background-attachment: fixed;
 }

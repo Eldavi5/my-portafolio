@@ -1,16 +1,15 @@
 .projects-section {
-    background-color: #fff;
     padding: 2rem 0;
 }
 
 .projects-section h2 {
-    color: #312F3D;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 2rem;
 }
 
 .project-card {
-    background-color: #D5DCE5;
+    background-color: #333333;
     border: none;
     align-items: center;
     border-radius: 8px;
@@ -18,30 +17,32 @@
 }
 
 .project-card .card-img-top {
-    max-width: 100%;
+    max-width: 90%;
     max-height: 300px;
     margin-bottom: 0.5rem;
+    margin-top: 10px;
 }
 
 .project-card .card-img-max {
     max-width: 200px;
     max-height: 300px;
     margin-bottom: 0.5rem;
+    margin-top: 10px;
 }
 
 
 .project-card .card-title {
-    color: #6470A3;
+    color: #ffffff;
     font-size: 1.25rem;
 }
 
 .project-card .card-text {
-    color: #312F3D;
+    color: #ffd700;
     font-size: 1rem;
 }
 
 .project-card .card-text strong {
-    color: #6470A3;
+    color: #CC5500;
 }
 
 @media (max-width: 768px) {

@@ -1,11 +1,9 @@
 .about-section {
-    background-color: #f0f0f0;
     padding: 2rem 0;
-    border-left: 5px solid #312F3D;
 }
 
 .about-section h2 {
-    color: #312F3D;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -14,8 +12,7 @@
 .skills-card,
 .education-card,
 .experience-card {
-    background-color: #D5DCE5;
-    color: #312F3D;
+    background-color: #333333;
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -25,14 +22,14 @@
 .skills-card .card-title,
 .education-card .card-title,
 .experience-card .card-title {
-    color: #6470A3;
+    color: #ffffff;
 }
 
 .bio-card .card-text,
 .skills-card .card-text,
 .education-card .card-text,
 .experience-card .card-text {
-    color: #312F3D;
+    color: #ffd700;
 }
 
 .skills-card ul,

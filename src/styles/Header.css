@@ -1,7 +1,7 @@
 .custom-header {
-    background-color: #D5DCE5;
+    background-color: #333333;
     padding: 1rem;
-    color: #312F3D;
+    color: #ffffff;
 }
 
 .custom-brand {
@@ -13,13 +13,13 @@
 .custom-header h1 {
     margin: 0;
     font-size: 1.5rem;
-    color: #312F3D;
+    color: #ffffff;
 }
 
 .custom-header p {
     margin: 0;
     font-size: 1rem;
-    color: #6470A3;
+    color: #ffd700;
 }
 
 .navbar-nav {
@@ -27,14 +27,14 @@
 }
 
 .navbar-nav .nav-link {
-    color: #312F3D;
+    color: #ffffff;
     text-decoration: none;
     margin: 0 1rem;
     transition: color 0.2s ease;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #6470A3;
+    color: #ffd700;
     text-decoration: underline;
 }
 
