@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import '../styles/About.css';
+import '../styles/About.scss';
 
-const About = () => (
+export const About = () => (
     <section id="about" className="about-section">
         <Container>
             <h2>Sobre Mí</h2>
@@ -72,4 +72,3 @@ const About = () => (
     </section>
 );
 
-export default About;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import '../styles/Projects.css';
+import '../styles/Projects.scss';
 
-const Projects = () => (
+export const Projects = () => (
     <section id="projects" className="projects-section">
         <Container>
             <h2>Proyectos</h2>
@@ -41,5 +41,3 @@ const Projects = () => (
         </Container>
     </section>
 );
-
-export default Projects;

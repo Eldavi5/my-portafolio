@@ -1,8 +1,8 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import '../styles/Header.css';
+import '../styles/Header.scss';
 
-const Header = () => (
+export const Header = () => (
     <Navbar expand="lg" className="custom-header">
         <Container>
             <Navbar.Brand className="custom-brand">
@@ -20,5 +20,3 @@ const Header = () => (
         </Container>
     </Navbar>
 );
-
-export default Header;

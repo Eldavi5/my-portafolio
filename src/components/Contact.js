@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import '../styles/Contact.css';
+import '../styles/Contact.scss';
 
-const Contact = () => (
+export const Contact = () => (
     <section id="contact" className="contact-section">
         <Container>
             <h2>Contacto</h2>
@@ -29,5 +29,4 @@ const Contact = () => (
     </section>
 );
 
-export default Contact;
 
