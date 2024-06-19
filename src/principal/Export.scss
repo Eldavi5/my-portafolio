@@ -16,9 +16,10 @@ html {
 }
 
 section {
-    padding: 2rem;
-    margin: 1rem 0;
+    height: 100%;
     position: relative;
     z-index: 1;
-    background-color: rgba(181, 192, 240, 0.274);
+    background-image: url('../images/fondo.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
