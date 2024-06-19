@@ -1,0 +1,12 @@
+#about {
+    background-color: #f0f0f0;
+    border-left: 5px solid #282c34;
+}
+
+#about h2 {
+    color: #282c34;
+}
+
+#about p {
+    color: #333;
+}

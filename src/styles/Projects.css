@@ -1,0 +1,23 @@
+#projects {
+    background-color: #fff;
+}
+
+#projects h2 {
+    color: #282c34;
+    text-align: center;
+}
+
+#projects div {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+#projects h3 {
+    color: #333;
+}
+
+#projects p {
+    color: #666;
+}
