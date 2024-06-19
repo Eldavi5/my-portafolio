@@ -1,23 +1,44 @@
-#projects {
+.projects-section {
     background-color: #fff;
+    padding: 2rem 0;
 }
 
-#projects h2 {
-    color: #282c34;
+.projects-section h2 {
+    color: #312F3D;
     text-align: center;
+    margin-bottom: 2rem;
 }
 
-#projects div {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin: 1rem 0;
+.project-card {
+    background-color: #D5DCE5;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#projects h3 {
-    color: #333;
+.project-card .card-img-top {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
 }
 
-#projects p {
-    color: #666;
+.project-card .card-title {
+    color: #6470A3;
+    font-size: 1.25rem;
+}
+
+.project-card .card-text {
+    color: #312F3D;
+    font-size: 1rem;
+}
+
+.project-card .card-text strong {
+    color: #6470A3;
+}
+
+@media (max-width: 768px) {
+    .project-card .card-img-top {
+        width: 100%;
+        height: auto;
+    }
 }

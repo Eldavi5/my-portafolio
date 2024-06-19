@@ -1,23 +1,58 @@
-header {
-    background-color: #282c34;
-    color: white;
+.custom-header {
+    background-color: #D5DCE5;
     padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    color: #312F3D;
 }
 
-header h1 {
+.custom-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.custom-header h1 {
     margin: 0;
     font-size: 1.5rem;
+    color: #312F3D;
 }
 
-nav a {
-    color: white;
+.custom-header p {
+    margin: 0;
+    font-size: 1rem;
+    color: #6470A3;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #312F3D;
     text-decoration: none;
     margin: 0 1rem;
+    transition: color 0.2s ease;
 }
 
-nav a:hover {
+.navbar-nav .nav-link:hover {
+    color: #6470A3;
     text-decoration: underline;
+}
+
+.navbar-toggler {
+    border-color: #312F3D;
+}
+
+.navbar-toggler-icon {
+    background-color: #312F3D;
+}
+
+@media (max-width: 992px) {
+    .custom-brand {
+        flex: 1;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
 }
