@@ -50,6 +50,19 @@ export const About = () => (
                                     <li>Ingeniería en Sistemas Computacionales - Tecnologico de Estudios Superiores Ecatepec</li>
                                 </ul>
                             </Card.Text>
+                            <Card.Title>Competencias</Card.Title>
+                            <Card.Text>
+                                <ul>
+                                    <li>Curso - React de cero a experto</li>
+                                </ul>
+                                <ul>
+                                    <li>Curso - React y Django</li>
+                                </ul><ul>
+                                    <li>Curso - React native aplicaciones nativas para android y ios</li>
+                                </ul><ul>
+                                    <li>Curso - Machine learning A a la Z: R y Python para Data Science</li>
+                                </ul>
+                            </Card.Text>
                         </Card.Body>
                     </Card>
                 </Col>
