@@ -1,6 +1,6 @@
-import React from 'react'
-import { Header, About, Projects, Contact, Footer } from "../components"
-import "./Export.scss"
+import React from 'react';
+import { Header, About, Projects, Contact, Footer } from "../components";
+import "./Export.scss";
 
 export function Menu() {
     return (
@@ -13,5 +13,5 @@ export function Menu() {
                 <Footer />
             </div>
         </div>
-    )
+    );
 }

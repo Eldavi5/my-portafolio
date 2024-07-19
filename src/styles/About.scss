@@ -2,56 +2,76 @@
     padding: 2rem 0;
 }
 
-.about-section h2 {
-    color: #ffffff;
+.about-section h2, .about-section h3 {
     text-align: center;
     margin-bottom: 2rem;
 }
 
-.bio-card,
-.skills-card,
-.education-card,
-.experience-card {
-    background-color: #001d9c9f;
+.bio-card {
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.bio-card .card-title,
-.skills-card .card-title,
-.education-card .card-title,
-.experience-card .card-title {
-    color: #ffffff;
+.horizontal-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
 }
 
-.bio-card .card-text,
-.skills-card .card-text,
-.education-card .card-text,
-.experience-card .card-text {
-    color: #F5F5F5;
+.info-card {
+    flex: 0 0 300px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.selected {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card-title, .card-text {
     text-align: justify;
 }
 
-.skills-card ul,
-.education-card ul,
-.experience-card ul {
+.skills-card ul, .education-card ul, .experience-card ul {
     padding-left: 1rem;
 }
 
-.skills-card li,
-.education-card li,
-.experience-card li {
+.skills-card li, .education-card li, .experience-card li {
     margin-bottom: 0.5rem;
 }
 
+.modal-content {
+    border-radius: 8px;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    border: none;
+}
+
 @media (max-width: 768px) {
-    .about-section h2 {
+    .about-section h2, .about-section h3 {
         font-size: 1.5rem;
     }
+    
+    .info-card {
+        flex: 0 0 250px;
+    }
+}
 
-    .skills-card,
-    .education-card {
-        margin-bottom: 2rem;
+@media (max-width: 576px) {
+    .info-card {
+        flex: 0 0 200px;
     }
 }
