@@ -60,7 +60,7 @@ export const About = () => {
     ];
 
     return (
-        <section id="about" className="about-section" style={{ backgroundColor: colors.background }}>
+        <section id="about" className="about-section" style={{ backgroundColor: colors.primary }}>
             <Container>
                 <h2 style={{ color: colors.text }}>Sobre Mí</h2>
                 <Row className="justify-content-center">

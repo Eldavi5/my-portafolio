@@ -50,7 +50,7 @@ export const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="projects-section" style={{ backgroundColor: colors.background }}>
+        <section id="projects" className="projects-section" style={{ backgroundColor: colors.primary }}>
             <Container>
                 <h2 style={{ color: colors.text }}>Proyectos</h2>
                 <Row className="justify-content-center">

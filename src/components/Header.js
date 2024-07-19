@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
-import { ThemeContext } from '../context/ThemeContext';  // Importa el contexto del tema
+import { ThemeContext } from '../context/ThemeContext';
 import Logo from '../images/Logo.png';
 import '../styles/Header.scss';
 
 export const Header = () => {
-    const { colors, handlePaletteChange } = useContext(ThemeContext);  // Usa el contexto del tema
+    const { colors, handlePaletteChange } = useContext(ThemeContext);
 
     return (
         <header style={{ backgroundColor: colors.background, color: colors.text }}>
@@ -26,14 +26,38 @@ export const Header = () => {
                             <Nav.Link href="#contact" style={{ color: colors.primary }}>Contacto</Nav.Link>
                         </Nav>
                         <Dropdown className="theme-dropdown">
-                            <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                            <Dropdown.Toggle 
+                                variant="secondary" 
+                                id="dropdown-basic" 
+                                style={{ backgroundColor: colors.primary, color: colors.secondary }}
+                            >
                                 Tema
                             </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => handlePaletteChange('neon')}>Neón Futurista</Dropdown.Item>
-                                <Dropdown.Item onClick={() => handlePaletteChange('space')}>Espacial</Dropdown.Item>
-                                <Dropdown.Item onClick={() => handlePaletteChange('techGreen')}>Tecnología Verde</Dropdown.Item>
-                                <Dropdown.Item onClick={() => handlePaletteChange('purpleMystic')}>Púrpura Místico</Dropdown.Item>
+                            <Dropdown.Menu style={{ backgroundColor: colors.secondary }}>
+                                <Dropdown.Item 
+                                    style={{ backgroundColor: colors.secondary, color: colors.text }} 
+                                    onClick={() => handlePaletteChange('neon')}
+                                >
+                                    Neón Futurista
+                                </Dropdown.Item>
+                                <Dropdown.Item 
+                                    style={{ backgroundColor: colors.secondary, color: colors.text }} 
+                                    onClick={() => handlePaletteChange('space')}
+                                >
+                                    Espacial
+                                </Dropdown.Item>
+                                <Dropdown.Item 
+                                    style={{ backgroundColor: colors.secondary, color: colors.text }} 
+                                    onClick={() => handlePaletteChange('techGreen')}
+                                >
+                                    Tecnología Verde
+                                </Dropdown.Item>
+                                <Dropdown.Item 
+                                    style={{ backgroundColor: colors.secondary, color: colors.text }} 
+                                    onClick={() => handlePaletteChange('purpleMystic')}
+                                >
+                                    Púrpura Místico
+                                </Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                     </Navbar.Collapse>

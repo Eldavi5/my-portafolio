@@ -27,7 +27,7 @@ export const Contact = () => {
     <section
       id="contact"
       className="contact-section"
-      style={{ backgroundColor: colors.background }}
+      style={{ backgroundColor: colors.primary }}
     >
       <Container>
         <h2 style={{ color: colors.text }}>Contacto</h2>
