@@ -15,7 +15,7 @@ export const Header = () => {
                         <img src={Logo} alt="Logo" className="logo" />
                         <div className="brand-text">
                             <h1 style={{ color: colors.primary }}>David Silva Bello</h1>
-                            <p style={{ color: colors.secondary }}>Desarrollador Front-End</p>
+                            <p style={{ color: colors.secondary }}>Desarrollador Full-Stack</p>
                         </div>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
