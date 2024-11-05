@@ -1,24 +1,29 @@
 .about-section {
-    padding: 2rem 0;
+    padding: 4rem 0;
+    background-color: #f8f9fa;
 }
 
 .about-section h2, .about-section h3 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    color: #343a40;
 }
 
 .bio-card {
     border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    background-color: #ffffff;
 }
 
 .horizontal-scroll {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: 2rem;
+    padding: 2rem 0;
 }
 
 .info-card {
@@ -26,43 +31,47 @@
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
     border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
 
 .info-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .selected {
     transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
 
 .card-title, .card-text {
     text-align: justify;
+    color: #495057;
 }
 
 .skills-card ul, .education-card ul, .experience-card ul {
-    padding-left: 1rem;
+    padding-left: 1.5rem;
 }
 
 .skills-card li, .education-card li, .experience-card li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .modal-content {
-    border-radius: 8px;
+    border-radius: 12px;
+    background-color: #ffffff;
 }
 
 .modal-header, .modal-body, .modal-footer {
     border: none;
+    background-color: #f8f9fa;
 }
 
 @media (max-width: 768px) {
     .about-section h2, .about-section h3 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
     
     .info-card {

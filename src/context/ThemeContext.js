@@ -1,36 +1,36 @@
 import React, { createContext, useState } from 'react';
 
-const colorPalettes = {
-    neon: {
-        background: '#0D0D0D',
-        primary: '#00FFFF',
-        secondary: '#FF00FF',
+export const colorPalettes = {
+    professional: {
+        background: '#F5F5F5',
+        primary: '#0D47A1',
+        secondary: '#1976D2',
+        text: '#212121',
+    },
+    dark: {
+        background: '#212121',
+        primary: '#BB86FC',
+        secondary: '#03DAC6',
         text: '#FFFFFF',
     },
-    space: {
-        background: '#1A1A2E',
-        primary: '#E94560',
-        secondary: '#0F3460',
-        text: '#FFFFFF',
+    light: {
+        background: '#FFFFFF',
+        primary: '#6200EE',
+        secondary: '#03DAC6',
+        text: '#000000',
     },
-    techGreen: {
-        background: '#091E42',
-        primary: '#00FF85',
-        secondary: '#008F5E',
-        text: '#FFFFFF',
-    },
-    purpleMystic: {
-        background: '#2A1A5E',
-        primary: '#DA22FF',
-        secondary: '#4B0082',
-        text: '#FFFFFF',
+    neutral: {
+        background: '#FAFAFA',
+        primary: '#607D8B',
+        secondary: '#CFD8DC',
+        text: '#37474F',
     },
 };
 
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-    const [palette, setPalette] = useState('neon');
+    const [palette, setPalette] = useState('professional');
 
     const handlePaletteChange = (paletteName) => {
         setPalette(paletteName);

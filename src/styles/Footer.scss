@@ -1,7 +1,23 @@
+$footer-background-color: #333; // Define a default background color
+$footer-text-color: #fff; // Define a default text color
+
 .footer {
     text-align: center;
     padding: 1rem;
     width: 100%;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     position: relative;
+    background-color: $footer-background-color; // Use a variable for background color
+    color: $footer-text-color; // Use a variable for text color
+    font-size: 0.875rem; // Adjust font size for better readability
+    line-height: 1.5; // Improve line height for better readability
+
+    p {
+        margin: 0; // Remove default margin from paragraph
+    }
+
+    @media (max-width: 768px) {
+        padding: 0.5rem; // Adjust padding for smaller screens
+        font-size: 0.75rem; // Adjust font size for smaller screens
+    }
 }

@@ -11,11 +11,17 @@
 
 .contact-info {
     background-color: var(--primary-bg-color);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
     margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .contact-info h4 {
@@ -31,9 +37,11 @@
 .contact-info a {
     color: var(--text-secondary);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
@@ -41,19 +49,27 @@
     background-color: var(--primary-color);
     border: none;
     border-radius: 4px;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-section .btn-primary:hover {
     background-color: var(--primary-hover-color);
+    transform: translateY(-3px);
 }
 
 .contact-form {
     background-color: var(--card-bg-color);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form .form-control {
@@ -62,4 +78,14 @@
 
 .contact-form .btn-primary {
     width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(-3px);
 }

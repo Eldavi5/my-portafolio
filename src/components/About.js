@@ -1,7 +1,54 @@
 import React, { useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import { Container, Row, Col, Card, Button, Modal } from 'react-bootstrap';
 import { ThemeContext } from '../context/ThemeContext';
 import '../styles/About.scss';
+
+const CardItem = ({ card, onClick, colors }) => (
+    <Col md={4} className="mb-4">
+        <Card className="info-card" style={{ backgroundColor: colors.secondary }}>
+            <Card.Body>
+                <Card.Title style={{ color: colors.primary }}>{card.title}</Card.Title>
+                <Button 
+                    variant="primary" 
+                    onClick={() => onClick(card)} 
+                    style={{ backgroundColor: colors.primary, borderColor: colors.primary }}
+                >
+                    Ver más
+                </Button>
+            </Card.Body>
+        </Card>
+    </Col>
+);
+
+CardItem.propTypes = {
+    card: PropTypes.object.isRequired,
+    onClick: PropTypes.func.isRequired,
+    colors: PropTypes.object.isRequired,
+};
+
+const ModalContent = ({ showModal, handleCloseModal, modalContent, colors }) => (
+    <Modal show={showModal} onHide={handleCloseModal} centered>
+        <Modal.Header closeButton style={{ backgroundColor: colors.background, color: colors.text }}>
+            <Modal.Title>{modalContent.title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body style={{ backgroundColor: colors.background, color: colors.text }}>
+            {modalContent.content}
+        </Modal.Body>
+        <Modal.Footer style={{ backgroundColor: colors.background }}>
+            <Button variant="secondary" onClick={handleCloseModal} style={{ backgroundColor: colors.secondary, borderColor: colors.secondary }}>
+                Cerrar
+            </Button>
+        </Modal.Footer>
+    </Modal>
+);
+
+ModalContent.propTypes = {
+    showModal: PropTypes.bool.isRequired,
+    handleCloseModal: PropTypes.func.isRequired,
+    modalContent: PropTypes.object.isRequired,
+    colors: PropTypes.object.isRequired,
+};
 
 export const About = () => {
     const { colors } = useContext(ThemeContext);
@@ -35,7 +82,7 @@ export const About = () => {
         {
             title: 'Educación y Competencias',
             content: (
-                <>
+                <React.Fragment>
                     <ul>
                         <li>Ingeniería en Sistemas Computacionales - Tecnologico de Estudios Superiores Ecatepec</li>
                     </ul>
@@ -46,7 +93,7 @@ export const About = () => {
                         <li>Curso - React native aplicaciones nativas para android y ios</li>
                         <li>Curso - Machine learning A a la Z: R y Python para Data Science</li>
                     </ul>
-                </>
+                </React.Fragment>
             )
         },
         {
@@ -80,37 +127,17 @@ export const About = () => {
                 <h3 style={{ color: colors.text }}>Habilidades, Educación y Experiencia</h3>
                 <Row className="horizontal-scroll justify-content-center">
                     {cards.map((card, index) => (
-                        <Col key={index} md={4} className="mb-4">
-                            <Card className="info-card" style={{ backgroundColor: colors.secondary }}>
-                                <Card.Body>
-                                    <Card.Title style={{ color: colors.primary }}>{card.title}</Card.Title>
-                                    <Button 
-                                        variant="primary" 
-                                        onClick={() => handleCardClick(card)} 
-                                        style={{ backgroundColor: colors.primary, borderColor: colors.primary }}
-                                    >
-                                        Ver más
-                                    </Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
+                        <CardItem key={index} card={card} onClick={handleCardClick} colors={colors} />
                     ))}
                 </Row>
             </Container>
 
-            <Modal show={showModal} onHide={handleCloseModal} centered>
-                <Modal.Header closeButton style={{ backgroundColor: colors.background, color: colors.text }}>
-                    <Modal.Title>{modalContent.title}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body style={{ backgroundColor: colors.background, color: colors.text }}>
-                    {modalContent.content}
-                </Modal.Body>
-                <Modal.Footer style={{ backgroundColor: colors.background }}>
-                    <Button variant="secondary" onClick={handleCloseModal} style={{ backgroundColor: colors.secondary, borderColor: colors.secondary }}>
-                        Cerrar
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+            <ModalContent 
+                showModal={showModal} 
+                handleCloseModal={handleCloseModal} 
+                modalContent={modalContent} 
+                colors={colors} 
+            />
         </section>
     );
 };

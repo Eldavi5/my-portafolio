@@ -1,28 +1,42 @@
+$primary-color: #0D0D0D;
+$secondary-color: #FFFFFF;
+$font-family: 'Arial', sans-serif;
+
 body,
 html {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: $font-family;
+    color: $secondary-color;
+    background-color: $primary-color;
 }
 
 .App {
-    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100%;
     position: relative;
-    background-color: #0D0D0D;
-    transition: background-color 0.5s ease;
+    background-color: $primary-color;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 section {
     height: 100%;
     position: relative;
     z-index: 1;
-    background-color: #0D0D0D;
+    background-color: $primary-color;
     background-size: cover;
     background-attachment: fixed;
     transition: background-color 0.5s ease;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 10px;
+    }
 }

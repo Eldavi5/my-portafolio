@@ -36,27 +36,27 @@ export const Header = () => {
                             <Dropdown.Menu style={{ backgroundColor: colors.secondary }}>
                                 <Dropdown.Item 
                                     style={{ backgroundColor: colors.secondary, color: colors.text }} 
-                                    onClick={() => handlePaletteChange('neon')}
+                                    onClick={() => handlePaletteChange('professional')}
                                 >
-                                    Neón Futurista
+                                    Profesional
                                 </Dropdown.Item>
                                 <Dropdown.Item 
                                     style={{ backgroundColor: colors.secondary, color: colors.text }} 
-                                    onClick={() => handlePaletteChange('space')}
+                                    onClick={() => handlePaletteChange('dark')}
                                 >
-                                    Espacial
+                                    Oscuro
                                 </Dropdown.Item>
                                 <Dropdown.Item 
                                     style={{ backgroundColor: colors.secondary, color: colors.text }} 
-                                    onClick={() => handlePaletteChange('techGreen')}
+                                    onClick={() => handlePaletteChange('light')}
                                 >
-                                    Tecnología Verde
+                                    Claro
                                 </Dropdown.Item>
                                 <Dropdown.Item 
                                     style={{ backgroundColor: colors.secondary, color: colors.text }} 
-                                    onClick={() => handlePaletteChange('purpleMystic')}
+                                    onClick={() => handlePaletteChange('neutral')}
                                 >
-                                    Púrpura Místico
+                                    Neutral
                                 </Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>

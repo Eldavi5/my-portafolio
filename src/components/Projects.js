@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Container, Row, Col, Card, Button, Modal } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Modal, Carousel } from 'react-bootstrap';
 import { ThemeContext } from '../context/ThemeContext';
 import '../styles/Projects.scss';
 
@@ -57,17 +57,18 @@ export const Projects = () => {
                     {projects.map((project, index) => (
                         <Col key={index} md={6} className="mb-4">
                             <Card className="project-card" style={{ backgroundColor: colors.secondary }}>
-                                <div className="project-images">
+                                <Carousel>
                                     {project.imgSrc.map((src, i) => (
-                                        <Card.Img 
-                                            key={i} 
-                                            variant="top" 
-                                            src={src} 
-                                            className="project-image" 
-                                            style={{ borderColor: colors.primary }} 
-                                        />
+                                        <Carousel.Item key={i}>
+                                            <img
+                                                className="d-block w-100"
+                                                src={src}
+                                                alt={`Slide ${i}`}
+                                                style={{ borderColor: colors.primary }}
+                                            />
+                                        </Carousel.Item>
                                     ))}
-                                </div>
+                                </Carousel>
                                 <Card.Body className="d-flex flex-column justify-content-between">
                                     <Card.Title style={{ color: colors.primary }}>{project.title}</Card.Title>
                                     <Button 
@@ -91,12 +92,12 @@ export const Projects = () => {
                 <Modal.Body style={{ backgroundColor: colors.background, color: colors.text }}>
                     {modalContent.content}
                 </Modal.Body>
-                <Modal.Footer style={{ backgroundColor: colors.background }}>
-                    <Button variant="secondary" onClick={handleCloseModal} style={{ backgroundColor: colors.secondary, borderColor: colors.secondary }}>
-                        Cerrar
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+                    <Modal.Footer style={{ backgroundColor: colors.background }}>
+                        <Button variant="secondary" onClick={handleCloseModal} style={{ backgroundColor: colors.secondary, borderColor: colors.secondary }}>
+                            Cerrar
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
         </section>
     );
 };
